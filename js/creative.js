@@ -98,6 +98,7 @@
         else {
             $("#mainContent").load(result.result, function () {
                 $("#nameFormField").val(result.name);
+                $("#lnameFormField").val(hash);
                 var form = document.getElementById('gform');
                 form.addEventListener("submit", handleFormSubmit, false);
 
