@@ -99,6 +99,10 @@
             $("#mainContent").load(result.result, function () {
                 $("#nameFormField").val(result.name);
                 $("#lnameFormField").val(hash);
+                if (result.phoneNeeded == 0)
+                {
+                    $("#phoneFormField").hide();
+                }
                 var form = document.getElementById('gform');
                 form.addEventListener("submit", handleFormSubmit, false);
 
