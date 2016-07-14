@@ -13,7 +13,7 @@ body {
   font-family: 'Neucha', cursive;
 }
 hr {
-  border-color: #6dd458;
+  border-color: white;
   border-width: 3px;
   max-width: 50px;
 }
@@ -42,9 +42,10 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 .bg-primary {
-  background-color: #6dd458;
+  background-color: #8BC349;
 }
 .bg-dark {
   background-color: #222222;
@@ -274,9 +275,9 @@ fieldset[disabled] .btn-default.active {
   background-color: #222222;
 }
 .btn-primary {
-  color: #ffffff;
-  background-color: #6dd458;
-  border-color: #6dd458;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -288,8 +289,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #0094ff;
-  border-color: #0067b2;
+  background-color: #8BC349;
+  border-color: #3e8834;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -331,6 +332,11 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl {
   padding: 15px 30px;
 }
+.btn-xxl {
+  padding: 20px 30px;
+  border-color: rgba(255, 255, 255, 1);
+  border: 1px solid;
+}
 .btn-dark-border {
     border: 1px solid #3e8834;
 }
@@ -358,7 +364,7 @@ body {
 }
 
 .videoBorder {
-    border:20px solid rgba(27,127,204,.8);
+    border:20px solid #8BC349;
     border-radius: 20px !important;
 }
 
@@ -369,6 +375,10 @@ form {
 .glyphicon-refresh-animate {
     -animation: spin .7s infinite linear;
     -webkit-animation: spin2 .7s infinite linear;
+}
+
+.btn-link {
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 @-webkit-keyframes spin2 {
