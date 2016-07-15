@@ -70,10 +70,12 @@
         xhr.onreadystatechange = function () {
             //console.log(xhr.status, xhr.statusText)
             //console.log(xhr.responseText);
-            //var respData = JSON.parse(xhr.responseText);
             $(".removeAfterFormSubmit").hide();
             $('#thankyou_message').show();
-            //$('#pieOfTheDay').text(respData.data);
+            try {
+            var respData = JSON.parse(xhr.responseText);
+            $('#pieOfTheDay').text(respData.data);
+            } catch(error) {}
             var aTag = $("#register");
             $('html,body').animate({ scrollTop: aTag.offset().top }, 'slow');
             return;
