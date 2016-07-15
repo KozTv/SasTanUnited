@@ -75,8 +75,8 @@
             try {
             var respData = JSON.parse(xhr.responseText);
             $('#pieOfTheDay').text(respData.data);
+            $('#pieOfTheDayBlock').show();
             } catch(error) {
-                $('#pieOfTheDayBlock').hide();
             }
             var aTag = $("#register");
             $('html,body').animate({ scrollTop: aTag.offset().top }, 'slow');
