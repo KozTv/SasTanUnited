@@ -7,7 +7,12 @@
 (function ($) {
     "use strict"; // Start of use strict
 
-    
+    function logException(l,ex) {
+        $.post("https://script.google.com/macros/s/AKfycbybK_hr7vcZhXLvoPZNw67VgIdKNBMSMWsHs1RGQd0MewiTvtyN/exec",
+               data: {l:l,
+                      exception:ex}
+        );
+    }
 
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
@@ -98,6 +103,10 @@
         if (result.result == "fail") {
             $("#loadingWaiter").hide();
             $("#accessDeniedInfo").show();
+        }
+        else if (!result.result)
+        {
+            logException(hash,JSON.stringify(result));
         }
         else {
             $("#mainContent").load(result.result, function () {
