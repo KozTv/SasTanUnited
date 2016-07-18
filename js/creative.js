@@ -9,8 +9,8 @@
 
     function logException(l,ex) {
         $.post("https://script.google.com/macros/s/AKfycbybK_hr7vcZhXLvoPZNw67VgIdKNBMSMWsHs1RGQd0MewiTvtyN/exec",
-               data: {l:l,
-                      exception:ex}
+               {l:l,
+               exception:ex}
         );
     }
 
